@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Fast</title>
+    <!-- Normalize -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'/>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Script -->
+    <script src="./app.js" defer></script>
+    <!-- SEO meta tags -->
+    <meta name="author" content="Lester Howard">
+    <meta name="description" content="Type as fast as you can before the time runs out. Also, you can set a difficulty and earn more time for each correct word">
+</head>
+<body>
+    <div class="container">
+        <div class="game">
+            <div class="game__settings">
+                <p class="game__set">Set difficulty: </p>
+                <select class="game__select">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>   
+            </div>
+
+            <div class="game__board">
+                <div class="game__info">
+                    <h1 class="game__tittle">How fast can you type?</h1>
+                    <p class="game__description">Type as fast as you can before the time runs out. Also, you can set a difficulty and earn more time for each correct word</p>
+                </div>
+                <div class="game__scores">
+                    <div class="game__time">Time: <span class="game__number" id="time"></span></div>
+                    <div class="game__score">Score: <span class="game__number" id="score"></span></div>
+                </div>
+                <div class="game__word"></div>
+                <input class="game__input" type="text" placeholder="Typing...">
+
+            </div>
+            
+            <div class="game__over">
+                <h2 class="game__tittle">Time Ran Out</h2>
+                <p class="game__description">Your final score is: <span class="game__number" id="finalScore"></span></p>
+                <button class="gameover__again">Try again</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

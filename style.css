@@ -1,0 +1,164 @@
+:root {
+    --font-family: 'IBM Plex Sans', sans-serif;
+    --background-color: #2D3047;
+    --wrapper: #E84855;
+    --wrapper-contrast: #fff;
+    --text-color: #000;
+    --text-contrast-color: #000;
+    --text-highlighted: #fff;
+    --highlight: #DFDFDF;
+}
+
+html {
+    font-size: 62.5%;
+}
+*, ::before,::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family), arial;
+    font-size: 1.6rem;
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 p {
+    margin: 0;
+}
+
+.game {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 60rem;
+    margin: 0 auto;  
+}
+
+.game__settings {
+    width: 100%;
+    text-align: center;
+    background: var(--wrapper-contrast);
+    color: var(--text-contrast-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+
+.game__set {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+}
+
+.game__select {
+    background: var(--wrapper);
+    color: var(--text-highlighted);
+    border: none;
+    border: .2rem solid var(--wrapper);
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.game__board {
+    background: var(--wrapper);
+    width: 100%;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    padding: 4rem;
+    text-align: center;
+}
+
+.game__tittle {
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 300;
+}
+
+.game__scores {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    font-weight: 300;
+    gap: 2.5rem;
+}
+
+.game__number {
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-left: .5rem;
+}
+
+.game__word {
+    color: var(--highlight);
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+.game__info {
+    margin-bottom: 2rem;
+}
+
+.game__description {
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.game__input {
+    height: 4rem;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    max-width: 100%;
+}
+
+.game__over {
+    position: absolute;
+    display: none;
+    background: var(--wrapper);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    border-radius: .3rem;
+}
+
+.game__over .game__tittle {
+    font-weight: bold;
+} 
+
+.game__over .game__description {
+    font-size: 2rem;
+}
+
+.gameover__again {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    cursor: pointer;
+}
