@@ -26,7 +26,7 @@ class Game {
             this.out = 0
             this.inputWord;
             this.selectedWord;
-            this.time = 2
+            this.time = 10
             this.score = 0
             this.difficulty = 'medium'
             Game.instance = this
